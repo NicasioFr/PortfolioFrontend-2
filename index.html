@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PortFolio</title>
+
+    <!--   bootstap cdn    Styles     -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+    <!-- CSS personal only -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/18726fe8d6.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+
+        <!--navbar donde se encuentra todos los elementos de la barra de navegacion  -->
+        <nav id="simple-list-item-0" class="navbar navbar-expand-lg  bg-transparent h-auto">
+            <div class="container-fluid ">
+
+                <a class="navbar-brand col-sm-2 col-md-2 col-lg-1 col-xl-1" href="https://www.argentina.gob.ar/produccion/transformacion-digital-y-economia-del-conocimiento/argentina-programa" target="_blank">
+                    <img class="img-fluid w-45 " src="img/fuente2.png" alt="Argentina Porgrama">
+                </a>
+                <a id="Hastag" class="navbar-brand" href="https://www.argentina.gob.ar/produccion/argentina-programa/segunda-etapa" target="_blank">
+                    <strong>#YoProgramo</strong>
+                </a>
+                <button class="navbar-toggler " type="button" data-bs-toggle="collapse"   data-bs-target="#navbarMenu" >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                    <!--lista donde se alojan los iconos de redes y login-->
+                    <div class="collapse navbar-collapse " id="navbarMenu">
+                        <ul class="navbar-nav"><!--LISTA DE ICONOS SACADOS DE FONTAWESOME-->
+                            <li class="nav-item">
+                                <a href="https://www.linkedin.com/in/nicasio-franco-124569200/" id="redes" class="nav-link"  target="_blank">
+                                    <i class=" fa-brands fa-linkedin-in fa-xl" ></i><!--ICONO DE LINKEDIN-->
+                                </a>
+                                
+                            </li>
+                            <li class="nav-item ">
+                                <a href="https://www.instagram.com/nicasio_fr/?hl=es" class="nav-link" id="redes" target="_blank">
+                                    <i class="fa-brands fa-instagram fa-xl"></i><!--ICONO DE INSTAGRAM-->
+                                </a>
+                                
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://twitter.com/Colon_OsCopia" class="nav-link" id="redes" target="_blank">
+                                    <i class="fa-brands fa-twitter fa-xl"></i><!--ICONO DE TWITTER-->
+                                </a>
+                                
+                            </li>
+                            <li class="nav-item ">
+                                <a href="#" class="nav-link " id="redes">
+                                    <button type="button" class="btn bg-transparent" data-bs-toggle="modal" data-bs-target="#miModal">
+                                        <i class="fa-solid fa-arrow-right-to-bracket fa-xl"></i><!--ICONO DE LOGIN-->
+                                    </button>
+                                 </a>
+                                
+                            </li>
+                        </ul>
+
+                    </div>
+            </div>     
+        </nav>
+        <!--FINDE LA BARRA DE NAVEGACION  -->
+
+
+         
+        
+        <!--COMIENZO DE VENTANAMODAL PARA LOGIN/LOGOUT -->
+        
+
+        <div class="modal mt-5" tabindex="-1" id="miModal"><!--MODAL SACADO DE BOOTSTRAP-->
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Inicio de sesion</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div>
+                        <label class="form-label text-black required autofocus">Email</label>
+                        <input type="email" class="form-control" placeholder="name@example.com">
+                    </div>
+                    <div>
+                        <label class="form-label text-black required">Contraseña</label>
+                        <input type="password" class="form-control" >
+                    </div>
+                  </form>
+                </div>
+                <div class="checkbox text-center">
+                    <label>
+                        <input type="checkbox" value="Remember-me">Remember Me
+                    </label>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary bg-danger" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary bg-primary">Log in</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+           <!--FIN  DE VENTANAMODAL PARA LOGIN/LOGOUT -->
+
+
+           <!--COMIENZO BARRA FLOTANTE -->
+           
+           <button id="bt" class="btn col-1 d-lg-none border-1 mt-5"  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive">
+             <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <div class="alert alert-info d-none d-lg-block text-center bg-dark opacity-50 border-0">
+                <a href="#simple-list-item-0" class="text-decoration-none ">Subir <br></a>
+                <a href="#simple-list-item-1" class="text-decoration-none ">Sobre mi</a>
+                <a href="#simple-list-item-2" class="text-decoration-none ">Experiencia laboral</a>
+                <a href="#simple-list-item-3" class="text-decoration-none">Educacion <br></a>
+                <a href="#simple-list-item-4" class="text-decoration-none">Hard & Soft Skills</a>
+                <a href="#simple-list-item-5" class="text-decoration-none ">Proyectos</a>
+            
+            </div>
+
+            <div class="offcanvas offcanvas-end " tabindex="-1" id="offcanvasResponsive" aria-labelledby="offcanvasResponsiveLabel">
+                 <div class="offcanvas-header bg-dark opacity-75">
+                     <h5 class="offcanvas-title " id="offcanvasResponsiveLabel">
+                        
+                     </h5>
+                     <button type="button" class="btn-close bg-transparent" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasResponsive" aria-label="Close">
+                        <i class="fa-solid fa-xmark "></i>
+                     </button>
+                 </div>
+                <div class="offcanvas-body bg-dark opacity-75 navbar-expand-xl">
+                    <p class="mb-0 "> 
+                        <a href="#simple-list-item-0" class="text-decoration-none ">Subir <br> </a>
+                        <a href="#simple-list-item-0" class="text-decoration-none">Redes <br></a>
+                        <a href="#simple-list-item-1" class="text-decoration-none">Sobre mi <br></a>
+                        <a href="#simple-list-item-2" class="text-decoration-none ">Experiencia laboral <br></a>
+                        <a href="#simple-list-item-3" class="text-decoration-none">Educacion <br></a>
+                        <a href="#simple-list-item-4" class="text-decoration-none">Hard & Soft Skills <br></a>
+                        <a href="#simple-list-item-5" class="text-decoration-none ">Proyectos</a>
+                    </p>
+                </div>
+            </div>
+                  
+   
+          
+        <!-- SECTION DONDE ESTA LA FOTO Y LA DESCRIPCION (ABOUT-ME) -->
+        <section id="simple-list-item-1" class="about">
+            <div   class="container-fluid text-center">
+                <div class="row">
+                    <div class="col-2 col-md-2 col-xl-2 ">
+                      <!-- vacio para administrar las celdas que se le da a la foto de perfil y
+                           la descripcion
+                      -->
+                    </div>
+                    <div class="col-9 col-sm-8 col-md-8 col-xl-9"><!--FOTO DE USUARIO, NOMBRE Y BOTON DE DESCARGA CV-->
+                        <img src="img/foto.png" alt="nicasio franco" class="rounded-circle w-25 h-auto">
+                        <h3 class="nombre mt-3">Nicasio Oscar Franco</h3>
+                        <a href="pdfs/cv.pdf" download="curriculum" class="download-btn"  target="_blank"> curriculum
+                            <i class="fa fa-download"></i>
+                        </a>
+                        
+                        <h4 id="abme" class="me text-center pb-3"><!--DESCRIPCION DE USUARIO-->
+                            <strong><br> Sobre mi:<br> <br></strong>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                            Dignissimos modi cum repellat obcaecati enim voluptatum 
+                            aliquid hic temporibus animi? Possimus in animi totam magni 
+                            dicta veniam aliquid sequi soluta est.
+                            <br><br>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione perferendis 
+                            quisquam pariatur a repudiandae unde eaque beatae. Labore aspernatur quod 
+                            ut explicabo doloremque aliquid dolorum tempore necessitatibus, 
+                            dignissimos velit nostrum.
+                        </h4>
+                     </div>  
+                </div>
+                
+            </div>
+        </section>  
+
+
+        <!--FIN DE SECTION ABOUT-ME-->
+        
+        
+    
+
+
+        <!--COMIENZO DEL SECTION EXPERIENCIA-->
+        <section id="simple-list-item-2" class="experiencia mt-4">
+            <div class="container-fluid text-center">
+                <div class="row">
+                    <div class="col-2 col-md-2 col-xl-2">
+                        <!--DIV VACIO PARA ESTABALECER LA POSICION DE CELDA QUE LE TOCA A LA DESCRIPCION DE LA EXPERIENCIA-->
+                    </div>
+                    <div id="exp" class="col-9 col-sm-8 col-md-8 col-xl-9">
+                        <h3>Experiencia laboral</h3>
+                        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae voluptatibus modi veritatis nostrum rem sequi quo laborum doloribus 
+                            quis ratione voluptates magnam nam, rerum et mollitia voluptate fugiat quam! Sunt? Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Quos a reiciendis odio. Obcaecati adipisci reprehenderit repudiandae iusto omnis nobis veniam quasi cum voluptas accusamus totam facilis 
+                            quidem asperiores, nostrum ea.
+                        </h4>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+        <!--FIN DEL SECTION EXPERIENCIA-->
+
+
+       
+
+        <!--COMIENZO DEL SECTION EDUCACION-->
+        <section id="simple-list-item-3" class="educacion mt-4">
+            <div class="container-fluid text-center">
+                <div class="row">
+
+                    <div class="col-2 col-md-2 col-xl2">
+                        <!--DIV VACIO PARA ESTABALECER LA POSICION DE CELDA QUE LE TOCA A LA DESCRIPCION DE LA EDUCACION-->
+                    </div>
+                    
+                    <div id="edu" class=" col-9 col-sm-8 col-md-8 col-xl-9">
+                        <h3>Educación</h3>
+                        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae voluptatibus modi veritatis nostrum rem sequi quo laborum doloribus 
+                            quis ratione voluptates magnam nam, rerum et mollitia voluptate fugiat quam! Sunt? Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Quos a reiciendis odio. Obcaecati adipisci reprehenderit repudiandae iusto omnis nobis veniam quasi cum voluptas accusamus totam facilis 
+                            quidem asperiores, nostrum ea.
+                        </h4>
+                    </div>
+
+                    
+                </div>
+
+            </div>
+
+        </section>
+        <!--FIN DEL SECTION EDUCACION-->
+
+       
+        <!--COMIENZO DEL SECTION Hard-Soft-Skills-->
+        <section id="simple-list-item-4" class="Hard-Soft-Skills mt-4">
+            <div class="container-fluid text-center">
+                <div class="row">
+
+                    <div class="col-2 col-md-2 col-xl2">
+                        <!--DIV VACIO PARA ESTABALECER LA POSICION DE CELDA QUE LE TOCA A LA DESCRIPCION DE LA EXPERIENCIA-->
+                      
+
+                    </div>
+                    
+                    <div id="hard" class="col-9 col-sm-8 col-md-8 col-xl-9 skills ">
+                        <h3 class="text-center mb-5">Hard & Soft Skills</h3>
+                        <li class="list-unstyled">
+                            <h3>JAVASCRIPT</h3>
+                            <span class="bar"><span class="javascript"></span></span>
+                        </li>
+                        <li class="list-unstyled">
+                            <h3>HTML5</h3>
+                            <span class="bar"><span class="html"></span></span>
+                        </li>
+                        <li class="list-unstyled">
+                            <h3>CSS</h3>
+                            <span class="bar"><span class="css"></span></span>
+                        </li>
+                        <li class="list-unstyled">
+                            <h3>JAVA</h3>
+                            <span class="bar"><span class="java"></span></span>
+                        </li>
+                        <li class="list-unstyled">
+                            <h3>PHYTON</h3>
+                            <span class="bar"><span class="phyton"></span></span>
+                        </li>
+                    
+                    </div>
+                    
+                   
+                </div>
+
+            </div>
+
+        </section>
+        <!--FIN DEL SECTION Hard-Soft-Skills-->
+
+       
+
+
+        <!--COMIENZO DEL SECTION Proyectos-->
+        <section id="simple-list-item-5" class="Proyectos mt-4">
+            <div class="container-fluid text-center">
+                <div class="row">
+
+                    <div class="col-2 col-md-2 col-xl2">
+                        <!--DIV VACIO PARA ESTABALECER LA POSICION DE CELDA QUE LE TOCA A LA DESCRIPCION DE LA PROYECTO-->
+                    </div>
+                    
+                    <div id="pro" class="col-9 col-sm-8 col-md-8 col-xl-9">
+                        <h3>Proyectos</h3>
+                        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae voluptatibus modi veritatis nostrum rem sequi quo laborum doloribus 
+                            quis ratione voluptates magnam nam, rerum et mollitia voluptate fugiat quam! Sunt? Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Quos a reiciendis odio. Obcaecati adipisci reprehenderit repudiandae iusto omnis nobis veniam quasi cum voluptas accusamus totam facilis 
+                            quidem asperiores, nostrum ea.
+                        </h4>
+                    </div>
+
+                    
+                </div>
+
+            </div>
+
+        </section>
+      <!--FIN DEL SECTION Proyectos-->
+
+   
+
+      
+     
+        
+        
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+
+            
+</body>
+</html>

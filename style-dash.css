@@ -1,0 +1,100 @@
+
+
+/*MAQUILLAJE PARA ELECCION DE FOTO DE PERFIL*/
+
+
+img{
+    height: 12.5rem;
+}
+.photo-perfil-div{
+    height: 14rem;
+    width: 14rem;
+    margin-top: 12rem;
+    
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    overflow: hidden;
+    border:0.4rem solid rgb(114, 111, 111) ;
+    
+}
+#foto-nom{
+    margin-left: -1rem;
+}
+#nombre-apellido{
+    margin-top: -6rem !important;
+}
+#photo{
+    height: 100%;
+    width: 100%;
+
+}
+#file{
+    display: none;
+}
+
+#btn-upload{
+    height: 2.5rem;
+    width: 100%;
+    position:absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: wheat;
+    line-height: 1.8rem;
+    font-size: rem;
+    cursor: pointer;
+    display: none;
+}
+
+
+
+/*..............................................................................................................*/
+
+
+
+/*posicion del conjunto de opciones para editar*/
+.list-group{
+    margin-top: 8rem;
+    margin-left: -9rem;
+    
+
+}
+.list-group-item{
+    color: #90d3f1;
+}
+
+/*adicion de datos personales*/
+.titulo{
+
+    color: whitesmoke;
+    margin-top: 10rem;
+    margin-right: 10rem;
+}
+
+/*color a "Seleccionar foto"*/
+.form-label{
+
+    color: whitesmoke;
+}
+
+/*posicionar el nav de edicion*/
+.d-flex{
+    margin-top: 10rem;
+    
+}
+
+#nombre-apellido{
+    margin-top: 18rem;
+}
+
+
+
+
+
+
+
