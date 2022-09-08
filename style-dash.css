@@ -1,4 +1,54 @@
 
+/*boton que salva el cambio de url LINKEDIN*/
+
+#btn-change:hover{ /*para que no se aclare cuando se le esta encima*/
+    color: whitesmoke;
+    background-color: rgba(13, 110,253);
+
+}
+
+/*FIN boton que salva el cambio de url LINKEDIN*/
+/*.............................................................................................*/
+
+
+/*MAQUILLAJE DE REDES*/
+
+
+ul li button{ 
+    color: whitesmoke !important;/*le da color a los iconos*/
+    position: relative;/*nuevamente, esto permite ajustar el tamaño*/
+    border-radius: 50%;
+    
+}
+
+
+
+#change:hover{ /*cuando se posa el mouse en las redes, gris para dar idea de edit*/
+    color: rgba(168, 164, 164, 0.7);
+}
+
+
+/* FIN MAQUILLAJE DE REDES*/
+/*.........................................................................................................*/
+
+
+
+
+
+
+
+/*MAQUILLAJE DE BOTON LOGOUT*/
+.fa-right-from-bracket:hover{ /*cuando se posa el mouse en logout*/
+
+    color: RED;
+    
+}
+
+
+
+/* FIN MAQUILLAJE DE BOTON LOGOUT*/
+/*.......................................................................................................*/
+
 
 /*MAQUILLAJE PARA ELECCION DE FOTO DE PERFIL*/
 
@@ -11,7 +61,7 @@ img{
     width: 14rem;
     margin-top: 12rem;
     
-    position: relative;
+    position:relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
@@ -94,7 +144,29 @@ img{
 
 
 
+/*AQUI MAQUILLAMOS EL ABOUT-ME*/
 
+
+/*color de la palabra descripcion*/
+.form-label{
+
+    color: whitesmoke;
+   
+    
+}
+
+
+/*tamaño del text-area*/
+#text-area{
+    width: 41rem;
+    margin-left: -2rem;
+}
+
+/*distancia del boton save de descripcion sobre el text area*/
+
+.btn-save{
+    margin-top: -1.4rem;
+}
 
 
 

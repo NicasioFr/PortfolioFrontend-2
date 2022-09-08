@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="style-dash.css">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="body-dash">
 
     <!--navbar donde se encuentra todos los elementos de la barra de navegacion  -->
     <nav id="simple-list-item-0" class="navbar navbar-expand-lg  bg-transparent h-auto">
@@ -31,29 +31,34 @@
             </button>
                 <!--lista donde se alojan los iconos de redes y login-->
                 <div class="collapse navbar-collapse " id="navbarMenu">
-                    <ul class="navbar-nav"><!--LISTA DE ICONOS SACADOS DE FONTAWESOME-->
+                    <ul class="navbar-nav">
+                        <!--LISTA DE ICONOS SACADOS DE FONTAWESOME-->
                         <li class="nav-item">
-                            <a href="https://www.linkedin.com/in/nicasio-franco-124569200/" id="redes" class="nav-link"  target="_blank">
-                                <i class=" fa-brands fa-linkedin-in fa-xl" ></i><!--ICONO DE LINKEDIN-->
-                            </a>
+                            <button type="button" class="btn bg-transparent border-0" data-bs-toggle="modal" data-bs-target="#linkedin" id="redes">
+                                <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#linkedin" data-bs-whatever="@mdo">Open modal for @mdo</button> -->
+                                    <i id="change" class=" fa-brands fa-linkedin-in fa-xl" ></i><!--ICONO DE LINKEDIN-->
+                                
+                            </button>
+                            
                             
                         </li>
                         <li class="nav-item ">
                             <a href="https://www.instagram.com/nicasio_fr/?hl=es" class="nav-link" id="redes" target="_blank">
-                                <i class="fa-brands fa-instagram fa-xl"></i><!--ICONO DE INSTAGRAM-->
+                                <i id="change" class="fa-brands fa-instagram fa-xl"></i><!--ICONO DE INSTAGRAM-->
                             </a>
                             
                         </li>
                         <li class="nav-item">
                             <a href="https://twitter.com/Colon_OsCopia" class="nav-link" id="redes" target="_blank">
-                                <i class="fa-brands fa-twitter fa-xl"></i><!--ICONO DE TWITTER-->
+                                <i id="change" class="fa-brands fa-twitter fa-xl"></i><!--ICONO DE TWITTER-->
                             </a>
                             
                         </li>
                         <li class="nav-item ">
                             <a href="#" class="nav-link " id="redes">
-                                <button type="button" class="btn bg-transparent" data-bs-toggle="modal" data-bs-target="#miModal">
-                                    <i class="fa-solid fa-arrow-right-to-bracket fa-xl"></i><!--ICONO DE LOGIN-->
+                                <button class="btn bg-transparent border-0" type="button" onclick="location.href='index.html'">
+                                    <i class="fa-solid fa-right-from-bracket fa-xl"></i> 
+                                    <!-- BOTON QUE REDIRIJE A INDEX.HTML -->
                                 </button>
                              </a>
                             
@@ -65,24 +70,46 @@
     </nav>
     <!--FINDE LA BARRA DE NAVEGACION  -->
 
+    <!-- COMIENZO DEL MODAL PARA MODIFICAR LINKEDIN -->
+   
+
+
+            <div class="modal fade" id="linkedin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Linkedin</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="recipient-name" class="col-form-label">Url:</label>
+                                    <input type="text" class="form-control" id="recipient-name">
+                                </div>
+                            
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            
+                            <button id="btn-change" type="button" class="btn btn-primary">Save</button>
+                          </div>
+                    
+                    
+                    </div>
+                </div>
+            </div>
+     <!-- FIN DEL MODAL PARA MODIFICAR LINKEDIN -->
+
     <div class="container-fluid "> 
         <div class="row ">
-            <div class="col-8 col-xl-3 col-md-4 col-sm-6 position-fixed " >
-                <ul class="list-group">
-                    <li class="list-group-item active bg-transparent border-0" data-bs-toggle="pill" aria-current="true" > fotos</li>
-                    <li class="list-group-item bg-transparent border-0" data-bs-toggle="pill"> Nombre y apellido</li>
-                    <li class="list-group-item bg-transparent border-0"data-bs-toggle="pill"> educacion</li>
-                    <li class="list-group-item bg-transparent border-0"data-bs-toggle="pill"> skills</li>
-                    <li class="list-group-item bg-transparent border-0"data-bs-toggle="pill" > Proyectos</li>
-                </ul>
-            </div>
-                  
-            <div class="col-6 col-xl-3 col-md-4 col-sm-6"></div>
+             <!-- COMIENZO FOTO, NOMBRE Y APELLIDO -->
+            <div class="col-4 col-xl-3 col-md-4 col-sm-6"></div>
             <div class="col-4 col-xl-12 col-md-12 col-sm-12 col-lg-12 w-50 h-auto ">
 
                
-                <div id="foto-nom" class=" mb-3">
-                    <div class="photo-perfil-div">
+                <div id="foto-nom" class=" mb-3 ">
+                    <div class="photo-perfil-div position-relative">
                         <img src="img/user.png" alt="" id="photo">
                         <input type="file" id="file">
                         <label for="file" id="btn-upload">Choose Photo</label>
@@ -94,17 +121,148 @@
                     </div>  
                     
                 </div>
+                  <!-- FIN  FOTO, NOMBRE Y APELLIDO -->
+
+
+                  
+
+                <!-- COMIENZO DE LOS TEXT AREA PARA MODIFICAR LOS AOUTME, EDUCACION, ETC -->
                 
+                <div id="text-area" class="container ">
+                    <form>
+                        <div class="mb-3 col-4 col-sm-6 col-md-8 col-lg-12 col-xl-12">
+                            <label id="simple-list-item-1" class="form-label  bg-transparent border-0 colo" for="mensaje">Descripcion</label>
+                            <textarea name="descripcion" class="form-control" rows="5" id="ab-me"></textarea>
+                        </div>
+                        <button type="button" class="btn btn-primary btn-save">Save</button>
+                    </form>
                 
+                </div>  
+
+                <div id="text-area" class="container mt-2 ">
+                    <form >
+                        <div  class="mb-3 col-4 col-sm-6 col-md-8 col-lg-12 col-xl-12">
+                            <label id="simple-list-item-2" class="form-label  bg-transparent border-0 colo" for="mensaje">Experiencia laboral</label>
+                            <textarea name="descripcion" class="form-control" rows="5" id="ab-me"></textarea>
+                        </div>
+                        <button type="button" class="btn btn-primary btn-save">Save</button>
+                    </form>
+                
+                </div>  
+
+                <div id="text-area" class="container mt-2">
+                    <form>
+                        <div class="mb-3 col-4 col-sm-6 col-md-8 col-lg-12 col-xl-12">
+                            <label id="simple-list-item-3" class="form-label  bg-transparent border-0 colo" for="mensaje">Educacion</label>
+                            <textarea name="descripcion" class="form-control" rows="5" id="ab-me"></textarea>
+                        </div>
+                        <button type="button" class="btn btn-primary btn-save">Save</button>
+                    </form>
+                
+                </div>  
+                 <!--PRINCIPIO ELECCION DE SKILLS Y SU PORCENTAJE DE CONOCIMIENTO -->
+
+                 <div class="row g-2 mt-2 ">
+                    <label id="simple-list-item-4"  class="form-label  bg-transparent border-0 colo" for="mensaje">Hard & Soft Skills</label>
+                    <div  class="">
+                        
+                      <div class="form-floating">
+                        <input type="text" class="form-control" id="floatingInputGrid" placeholder="name@example.com" value="java">
+                        <label  for="floatingInputGrid">Soft Skill</label>
+                      </div>
+                      
+                    </div>
+                    
+                    <div class=" ">
+                      <div class="form-floating">
+                        <select class="form-select" id="floatingSelectGrid">
+                          <option selected>10%</option>
+                          <option value="1">15%</option>
+                          <option value="2">20%</option>
+                          <option value="3">25%</option>
+                          <option value="3">30%</option>
+                          <option value="3">35%</option>
+                          <option value="3">40%</option>
+                          <option value="3">45%</option>
+                          <option value="3">50%</option>
+                          <option value="3">55%</option>
+                          <option value="3">60%</option>
+                          <option value="3">65%</option>
+                          <option value="3">70%</option>
+                          <option value="3">75%</option>
+                          <option value="3">80%</option>
+                          <option value="3">85%</option>
+                          <option value="3">90%</option>
+                          <option value="3">95%</option>
+                          <option value="3">100%</option>
+                        </select>
+                        <label for="floatingSelectGrid">Level</label>
+                      </div>
+                      <button type="button" class="btn btn-primary" >Save</button>
+                    </div>
+                    
+                  </div>
+
+            <!--FIN ELECCION DE SKILLS Y SU PORCENTAJE DE CONOCIMIENTO -->
+                    <div id="text-area" class="container mt-2">
+                    <form>
+                        <div class="mb-3 col-4 col-sm-6 col-md-8 col-lg-12 col-xl-12">
+                            <label id="simple-list-item-5"  class="form-label  bg-transparent border-0 colo" for="mensaje">Proyectos</label>
+                            <textarea name="descripcion" class="form-control" rows="5" id="ab-me"></textarea>
+                        </div>
+                        <button type="button" class="btn btn-primary btn-save">Save</button>
+                    </form>
+                
+                </div>  
+                
+                <!-- FIN DE LOS TEXT AREA PARA MODIFICAR LOS AOUTME, EDUCACION, ETC -->
             </div>
 
+            <!-- barra a la izq y bara escondida esperando colapsar -->
+            <div class=" col-8 col-xl-3 col-md-4 col-sm-6 position-fixed " >
+                
+                <button id="bt" class="btn col-1 d-lg-none border-1 mt-5"  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+               <div class="alert alert-info d-none d-lg-block text-center bg-dark opacity-50 border-0">
+                   <a href="#simple-list-item-0" class="text-decoration-none ">Subir <br></a>
+                   <a href="#simple-list-item-1" class="text-decoration-none ">Sobre mi</a>
+                   <a href="#simple-list-item-2" class="text-decoration-none ">Experiencia laboral</a>
+                   <a href="#simple-list-item-3" class="text-decoration-none">Educacion <br></a>
+                   <a href="#simple-list-item-4" class="text-decoration-none">Hard & Soft Skills</a>
+                   <a href="#simple-list-item-5" class="text-decoration-none ">Proyectos</a>
+               
+               </div>
+
+               <div class="offcanvas  offcanvas-end  w-100" tabindex="-1" id="offcanvasResponsive" aria-labelledby="offcanvasResponsiveLabel">
+                   <div class=" offcanvas-header bg-dark opacity-75">
+                       <h5 class="offcanvas-title " id="offcanvasResponsiveLabel"></h5>
+                       <button type="button" class="btn-close bg-transparent" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasResponsive" aria-label="Close">
+                       <i class="fa-solid fa-xmark "></i>
+                       </button>
+                   </div>
+                   <div class="offcanvas-body bg-dark opacity-75 navbar-expand-xl">
+                       <p class="mb-0 "> 
+                           <a href="#simple-list-item-0" class="text-decoration-none ">Subir <br> </a>
+                           <a href="#simple-list-item-1" class="text-decoration-none">Sobre mi <br></a>
+                           <a href="#simple-list-item-2" class="text-decoration-none ">Experiencia laboral <br></a>
+                           <a href="#simple-list-item-3" class="text-decoration-none">Educacion <br></a>
+                           <a href="#simple-list-item-4" class="text-decoration-none">Hard & Soft Skills <br></a>
+                           <a href="#simple-list-item-5" class="text-decoration-none ">Proyectos</a>
+                       </p>
+                   </div>
+               </div>
+           </div>
+           <!--fin barra a la izq y bara escondida esperando colapsar -->
         </div>
         
     </div>
 
+
+
     
-      
-    
+
     
     
     
